@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>アンケートテスト</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <h2>アンケート テスト</h2>
+      <p>とりあえずデータを渡しているだけ</p>
+      <h3>他に必要な機能</h3>
+      <ul>
+        <li>ログイン機能（自分が発表者の時はアンケート結果が見られるように）</li>
+        <li>管理機能（その日の全体MTの発表者・司会者などが分かるように）</li>
+        <li>ファイルアップロード・削除など（今はドライブ管理なので余裕があれば）</li>
+      </ul>
+      <div class="col-md-8 col-lg-6">
+        <div class="well">
+          <form class="form-horizontal" action="get.php" method="post">
+            <fieldset>
+              <legend>全体MT評価</legend>
+              <label class="small text-danger">*必須</label>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="select">発表者を選択</label>
+                  <select class="form-control" name="author">
+                  <option value="author1">1</option>
+                  <option value="author2">2</option>
+                  <option value="author3">3</option>
+                  <option value="author4">4</option>
+                </select>
+                </div>
+
+                <div class="form-group">
+                  <label>発表の構成 (パワーポイント・説明) <font class="text-danger">*</font></label>
+                  <div class="radio">
+                    <div class="col-xs-4"><label>理解しにくい</label></div>
+                    <div class="col-xs-4">
+                      <label><input type="radio" name="presen" value="1" checked=""> 1 </label>
+                      <label><input type="radio" name="presen" value="2"> 2</label>
+                      <label><input type="radio" name="presen" value="3"> 3</label>
+                      <label><input type="radio" name="presen" value="4"> 4</label>
+                    </div>
+                    <div class="col-xs-4"><label>理解しやすい</label></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>発表の作法 (声の明瞭さ・姿勢・態度) <font class="text-danger">*</font></label>
+                  <div class="radio">
+                    <div class="col-xs-4"><label>悪い</label></div>
+                    <div class="col-xs-4">
+                      <label><input type="radio" name="manner" value="1" checked=""> 1 </label>
+                      <label><input type="radio" name="manner" value="2"> 2</label>
+                      <label><input type="radio" name="manner" value="3"> 3</label>
+                      <label><input type="radio" name="manner" value="4"> 4</label>
+                    </div>
+                    <div class="col-xs-4"><label>良い</label></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>資料の構成(パワーポイント・予稿) <font class="text-danger">*</font></label>
+                  <div class="radio">
+                    <div class="col-xs-4"><label>理解しにくい</label></div>
+                    <div class="col-xs-4">
+                      <label><input type="radio" name="document" value="1" checked=""> 1 </label>
+                      <label><input type="radio" name="document" value="2"> 2</label>
+                      <label><input type="radio" name="document" value="3"> 3</label>
+                      <label><input type="radio" name="document" value="4"> 4</label>
+                    </div>
+                    <div class="col-xs-4"><label>理解しやすい</label></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>質問に対する回答 (質問者のみ)</label>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="question" value="question1">
+                      納得できた
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="question" value="question2">
+                      納得できなかった
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="textArea">コメント & 質問</label>
+                  <textarea class="form-control" rows="3" name="comment"></textarea>
+                  <span class="help-block">質問があれば入力</span>
+                </div>
+
+              </div>
+
+              <div class="form-group">
+                <div class="col-lg-10">
+                  <button type="reset" class="btn btn-default">取り消し</button>
+                  <button type="submit" class="btn btn-primary">送信</button>
+                </div>
+              </div>
+
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
